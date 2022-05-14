@@ -14,7 +14,7 @@ import {
   useColorModeValue as mode,
 } from '@chakra-ui/react';
 
-import { Course } from '@/types/course';
+import { Course } from '../types/course';
 import ExternalLink from '../external-link';
 import { FiArrowUpRight } from 'react-icons/fi';
 import Image from '../image';

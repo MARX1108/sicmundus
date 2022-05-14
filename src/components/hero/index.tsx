@@ -18,7 +18,7 @@ import {
 import { Link as LinkType } from "@/types/link";
 import ExternalLink from "../external-link";
 import HeroImage from "../hero-image";
-import HeroPlay from "../hero-play";
+// import HeroPlay from "../hero-play";
 
 type SocialLink = LinkType & { color?: string };
 
@@ -57,9 +57,9 @@ const Hero = () => {
           spacing={3}
         >
           <Heading as="h1" size="lg">
-            Hi, I’m Lazar Nikolov.
+            Hi, I’m Marx Wang.
           </Heading>
-          <HeroPlay />
+          {/* <HeroPlay /> */}
         </Stack>
         <Text as="h2" lineHeight="175%">
           I’m a full-stack engineer, a designer, and a content creator. I work
@@ -71,7 +71,7 @@ const Hero = () => {
           <ExternalLink href="https://egghead.io">egghead.io</ExternalLink>{" "}
           <strong>instructor</strong>.
         </Text>
-        <Stack direction={{ base: "column", md: "row" }} spacing={3}>
+        {/* <Stack direction={{ base: "column", md: "row" }} spacing={3}>
           {socialLinks.map(({ href, label, color }) => (
             <Button
               key={href}
@@ -87,7 +87,7 @@ const Hero = () => {
               {label}
             </Button>
           ))}
-        </Stack>
+        </Stack> */}
       </VStack>
       <HeroImage />
     </Stack>

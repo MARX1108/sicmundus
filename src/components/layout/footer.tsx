@@ -66,11 +66,10 @@ const Footer = () => {
         spacing={0}
       >
         <Text color="gray.500" fontSize="sm">
-          ©{" "}
+          Designed and Developed by Marx Wang ©{" "}
           <chakra.span as="time" color="purple.500">
             {new Date().getFullYear()}
           </chakra.span>{" "}
-          Marx Wang
         </Text>
       </Stack>
     </VStack>

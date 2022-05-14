@@ -7,6 +7,7 @@ import CoursesSection from "../src/components/courses-section";
 // import courses from "../src/data/courses";
 import BlogpostsSection from "../src/components/blogposts-section";
 import { BlogPost } from "../src/components/types/blog-post";
+import Deck from "../src/components/deck";
 
 
 // type Props = {
@@ -36,7 +37,8 @@ const IndexPage = () => {
   return (
     <>
       <Hero />
-      <CoursesSection courses={courses} />
+      <Deck courses={courses} />
+      {/* <CoursesSection courses={courses} /> */}
       <BlogpostsSection posts={posts} />
     </>
   );
