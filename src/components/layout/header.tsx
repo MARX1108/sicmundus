@@ -4,7 +4,7 @@ import {
   IconButton,
   Link,
   Tooltip,
-  Container,
+  Container, useColorModeValue
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { useContext, useEffect, useState } from 'react';
@@ -15,6 +15,16 @@ import { useContext, useEffect, useState } from 'react';
 const Header = () => {
   // const { open: openCommandPalette } = useContext(CmdPaletteContext);
   const [shortcut, setShortcut] = useState<string>();
+  const [scrolled, setScrolled] = useState<boolean>(false);
+
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeNavbar);
+
+    return () => {
+      window.removeEventListener("scroll", changeNavbar);
+    };
+  });
 
   useEffect(() => {
     setShortcut(
@@ -22,8 +32,45 @@ const Header = () => {
     );
   }, [setShortcut]);
 
+  // Here are all the props that may change depending on navbar's type or state.(secondary, variant, scrolled)
+  let mainText = useColorModeValue("navy.700", "white");
+  let secondaryText = useColorModeValue("gray.700", "white");
+  let navbarPosition = "fixed";
+  let navbarFilter = "none";
+  let navbarBackdrop = "blur(20px)";
+  let navbarShadow = "none";
+  let navbarBg = useColorModeValue(
+    "rgba(244, 247, 254, 0.2)",
+    "rgba(11,20,55,0.5)"
+  );
+  let navbarBorder = "transparent";
+  let secondaryMargin = "0px";
+  let paddingX = "15px";
+  let gap = "0px";
+  const changeNavbar = () => {
+    if (window.scrollY > 1) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
   return (
     <HStack
+      boxShadow={navbarShadow}
+      bg={navbarBg}
+      borderColor={navbarBorder}
+      filter={navbarFilter}
+      backdropFilter={navbarBackdrop}
+      backgroundPosition="center"
+      backgroundSize="cover"
+      borderRadius="16px"
+      borderWidth="1.5px"
+      borderStyle="solid"
+      transitionDelay="0s, 0s, 0s, 0s"
+      transitionDuration=" 0.25s, 0.25s, 0.25s, 0s"
+      transition-property="box-shadow, background-color, filter, border"
+      transitionTimingFunction="linear, linear, linear, linear"
       as="nav"
       position="sticky"
       zIndex="popover"
@@ -33,13 +80,10 @@ const Header = () => {
       w="full"
       mb={16}
       py={3}
-      bg="white"
       _dark={{
         bg: 'gray.800',
       }}
       insetX={0}
-      transitionDuration="normal"
-      transitionProperty="background"
     >
       <Container
         alignItems="center"
@@ -50,7 +94,7 @@ const Header = () => {
       >
         <NextLink href="/" passHref>
           <Link>
-            <Heading size="sm">Lazar.</Heading>
+            <Heading size="sm">Marx.W</Heading>
           </Link>
         </NextLink>
         <HStack alignItems="center" spacing={{ base: 0, md: 2 }}>
