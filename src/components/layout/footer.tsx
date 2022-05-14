@@ -1,85 +1,31 @@
 import { useRouter } from "next/router";
 import NextLink from "next/link";
-import { chakra, Stack, VStack, Divider, Link, Text } from "@chakra-ui/react";
+import {
+  chakra,
+  Stack,
+  VStack,
+  Divider,
+  Link,
+  Text,
+  Flex,
+  IconButton,
+} from "@chakra-ui/react";
 
 import {
   TWITTER_PROFILE,
   GITHUB_PROFILE,
-  YOUTUBE_CHANNEL,
-  POLYWORK_PROFILE,
-  TWITCH_CHANNEL,
-  PLAUSIBLE_LINK,
+  LINKEDIN_PROFILE,
+  INS_PROFILE,
+  BEHANCE_PROFILE
 } from "../../constants";
-import { Link as LinkType } from "@/types/link";
-
-const firstGroup: LinkType[] = [
-  {
-    href: "/",
-    label: "Home",
-  },
-  {
-    href: "/blog",
-    label: "Blog",
-  },
-  {
-    href: "/colophon",
-    label: "Colophon",
-  },
-  {
-    href: "/talks",
-    label: "Talks",
-  },
-  {
-    href: PLAUSIBLE_LINK,
-    label: "Analytics",
-  },
-];
-
-const secondGroup = [
-  {
-    href: TWITTER_PROFILE,
-    label: "Twitter",
-  },
-  {
-    href: GITHUB_PROFILE,
-    label: "GitHub",
-  },
-  {
-    href: YOUTUBE_CHANNEL,
-    label: "YouTube",
-  },
-  {
-    href: POLYWORK_PROFILE,
-    label: "Polywork",
-  },
-  {
-    href: TWITCH_CHANNEL,
-    label: "Twitch",
-  },
-];
-
-const thirdGroup = [
-  {
-    href: "/uses",
-    label: "Uses",
-  },
-  {
-    href: "/gear",
-    label: "Gear",
-  },
-  {
-    href: "/bookmarks",
-    label: "Bookmarks",
-  },
-  {
-    href: "/books",
-    label: "Books",
-  },
-  {
-    href: "/newsletter",
-    label: "Newsletter",
-  },
-];
+import { Link as LinkType } from "../types/link";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+  FaBehance,
+  FaTwitter,
+} from "react-icons/fa";
 
 const Footer = () => {
   const { pathname } = useRouter();
@@ -93,43 +39,23 @@ const Footer = () => {
         w="full"
         spacing={{ base: 2, md: 8 }}
       >
-        <VStack alignItems="flex-start">
-          {firstGroup.map(({ href, label }) => (
-            <NextLink key={href} href={href} passHref>
-              <Link
-                color={pathname === href ? "purple.500" : "gray.500"}
-                isExternal={href.startsWith("http")}
-              >
-                {label}
-              </Link>
-            </NextLink>
-          ))}
-        </VStack>
-        <VStack alignItems="flex-start">
-          {secondGroup.map(({ href, label }) => (
-            <NextLink key={href} href={href} passHref>
-              <Link
-                color="gray.500"
-                isExternal={href.startsWith("http")}
-                target="_blank"
-              >
-                {label}
-              </Link>
-            </NextLink>
-          ))}
-        </VStack>
-        <VStack alignItems="flex-start">
-          {thirdGroup.map(({ href, label }) => (
-            <NextLink key={href} href={href} passHref>
-              <Link
-                color={pathname === href ? "purple.500" : "gray.500"}
-                isExternal={href.startsWith("http")}
-              >
-                {label}
-              </Link>
-            </NextLink>
-          ))}
-        </VStack>
+        <Flex>
+          <Link href={GITHUB_PROFILE} target="_blank">
+            <IconButton icon={<FaGithub />} isRound={true} size="md" m="1" aria-label="Github" />
+          </Link>
+          <Link href={LINKEDIN_PROFILE} target="_blank">
+            <IconButton icon={<FaLinkedin />} isRound={true} size="md" m="1" aria-label="Linkedin" />
+          </Link>
+          <Link href={INS_PROFILE} target="_blank">
+            <IconButton icon={<FaInstagram />} isRound={true} size="md" m="1" aria-label="Instagram" />
+          </Link>
+          <Link href={BEHANCE_PROFILE} target="_blank">
+            <IconButton icon={<FaBehance />} isRound={true} size="md" m="1" aria-label="Behance" />
+          </Link>
+          <Link href={TWITTER_PROFILE} target="_blank">
+            <IconButton icon={<FaTwitter />} isRound={true} size="md" m="1" aria-label="Twitter" />
+          </Link>
+        </Flex>
       </Stack>
       <Stack
         alignItems="center"
@@ -144,9 +70,8 @@ const Footer = () => {
           <chakra.span as="time" color="purple.500">
             {new Date().getFullYear()}
           </chakra.span>{" "}
-          Lazar Nikolov
+          Marx Wang
         </Text>
-        {/* <VercelCallout /> */}
       </Stack>
     </VStack>
   );
