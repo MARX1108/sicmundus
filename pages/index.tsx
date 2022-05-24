@@ -8,20 +8,12 @@ import CoursesSection from "../src/components/courses-section";
 import BlogpostsSection from "../src/components/blogposts-section";
 import { BlogPost } from "../src/components/types/blog-post";
 import Deck from "../src/components/deck";
-
+import courses from "../src/data/websites.json"
 
 // type Props = {
 //   posts: BlogPost[];
 // };
 
-const courses = [
-  {
-    id: 1,
-    title: "test",
-    description: "description",
-    url: "https://dribbble.com"
-  }
-]
 
 const posts = [
   {
