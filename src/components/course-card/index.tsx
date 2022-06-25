@@ -35,6 +35,7 @@ const CourseCard = ({
   if (url && url.length > 0) {
     courseDomain = new URL(url).host;
   }
+  courseDomain = "";
 
   const progressTrackColor = mode('blackAlpha.100', 'whiteAlpha.200');
   const progressSize = useBreakpointValue({ base: '120px', md: '80px' });

@@ -1,4 +1,4 @@
-import { Course } from "@/types/course";
+import { Course } from "../types/course";
 import { VStack, Heading, List, ListItem } from "@chakra-ui/react";
 import CourseCard from "../course-card";
 

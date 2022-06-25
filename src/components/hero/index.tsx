@@ -15,7 +15,7 @@ import {
   TWITCH_CHANNEL,
   TWITTER_PROFILE,
 } from "../../constants";
-import { Link as LinkType } from "@/types/link";
+import { Link as LinkType } from "../types/link";
 import ExternalLink from "../external-link";
 import HeroImage from "../hero-image";
 // import HeroPlay from "../hero-play";

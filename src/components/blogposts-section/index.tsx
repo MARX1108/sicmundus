@@ -1,7 +1,7 @@
 import { Heading, VStack, List, ListItem, Icon, Box } from "@chakra-ui/react";
 import { CgArrowRight } from "react-icons/cg";
 
-import { BlogPost } from "@/types/blog-post";
+import { BlogPost } from "../types/blog-post";
 import BlogPostCard from "../blog-post-card";
 import Link from "../link";
 

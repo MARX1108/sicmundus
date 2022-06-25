@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/react';
 import { format } from 'timeago.js';
 
-import { BlogPost } from '@/types/blog-post';
+import { BlogPost } from '../types/blog-post';
 
 const BlogPostCard = ({
   title,

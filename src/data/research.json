@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "title": "Civil War Twin: Exploring Ethical Challenges in Designing an Educational Face Recognition Application",
     "description": "5th AAAI/ACM Conference on AI, Ethics, and Society",
     "date": "2022-04-10",
@@ -8,7 +8,7 @@
     "readingTime": "20min"
   },
   {
-    "id": 2,
+    "id": "2",
     "title": "Predicting Aggressive Behavior in Childhood and Early Adolescence with the Socioecological Approach: From Neighborhoods, and The Brain",
     "description": "The 14th Annual Meeting of the Social & Affective Neuroscience Society",
     "date": "2022-3-15",
@@ -16,7 +16,7 @@
     "readingTime": "20min"
   },
   {
-    "id": 3,
+    "id": "3",
     "title": "Predicting Prosocial Behavior in Childhood and Early Adolescence by Integrating Parental Factors, Neighborhoods, and The Brain",
     "description": "Biennial Meeting of the Society for Research on Adolescence",
     "date": "2021-12-25",
@@ -24,7 +24,7 @@
     "readingTime": "20min"
   },
   {
-    "id": 4,
+    "id": "4",
     "title": "The Effects of Incorrect Occlusion Cues on the Understanding of Bare-handed Referencing in Collaborative Augmented Reality",
     "description": "Frontiers at VR/AR 2021",
     "date": "2021-6-1",
@@ -32,7 +32,7 @@
     "readingTime": "20min"
   },
   {
-    "id": 6,
+    "id": "6",
     "title": "Understanding the Challenges of Online Group Chat for Productive Discourse at Scale",
     "description": "The 23rd ACM Conference on Computer-Supported Cooperative Work and Social Computing 2020",
     "date": "2020-7-10",
@@ -40,7 +40,7 @@
     "readingTime": "20min"
   },
   {
-    "id": 6,
+    "id": "7",
     "title": "Find Your Twin in History: Exploring Ethical Design Challenges in Facial Recognition",
     "description": "The 23rd ACM Conference on Computer-Supported Cooperative Work and Social Computing 2020",
     "date": "2020-7-10",

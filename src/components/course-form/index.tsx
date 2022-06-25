@@ -13,12 +13,12 @@ import {
 import { HiOutlineMail } from 'react-icons/hi';
 import useSWR from 'swr';
 
-import fetcher from '@/utils/fetcher';
-import { Subscribers } from '@/types/subscribers';
-import { Form, FormState } from '@/types/form-state';
-import { Course } from '@/types/course';
+import fetcher from '../../utils/fetcher';
+import { Subscribers } from '../types/subscribers';
+import { Form, FormState } from '../types/form-state';
+import { Course } from '../types/course';
 import Link from '../link';
-import { TWITTER_PROFILE } from 'src/constants';
+import { TWITTER_PROFILE } from '../../constants';
 
 type Props = {
   course: Course;
@@ -37,7 +37,7 @@ const CourseForm = ({ course: { formId, title } }: Props) => {
 
     const res = await fetch(`/api/courses/subscribe/${formId}`, {
       body: JSON.stringify({
-        email: e.currentTarget.elements['email'].value,
+        // email: e.currentTarget.elements['email'].value,
       }),
       headers: {
         'Content-Type': 'application/json',

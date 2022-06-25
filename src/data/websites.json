@@ -1,14 +1,14 @@
 
 [
     {
-      "id": 1,
+      "id": "1",
       "title": "Civil War Twin",
       "description": "Civil War Twin (CWT) is a fun web application where people can find their look-alikes from the American Civil War era (1861-65) using facial recognition technology.",
       "url": "https://www.civilwartwin.com",
       "live":true
     },
     {
-        "id": 2,
+        "id": "2",
         "title": "International Community For Auditory Display",
         "description": "ICAD is a forum for presenting research on the use of sound to display data, monitor systems, and provide enhanced user interfaces for computers and virtual reality systems. It is unique in its singular focus on auditory displays and the array of perception, technology, and application areas that this encompasses.",
         "url": "https://icad.org",
@@ -16,7 +16,7 @@
 
     },
     {
-        "id": 3,
+        "id": "3",
         "title": "Ithem",
         "description": " iThem offers programmers to author algorithms that can connect different IoT services and make a real impact on their daily lives and give end-users novel motivations to learn to program.",
         "url": "https://ithem.cs.vt.edu",
