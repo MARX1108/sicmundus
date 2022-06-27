@@ -1,6 +1,6 @@
 import { Box, AspectRatio, Flex } from "@chakra-ui/react";
 
-import StatusIndicator from "../status-indicator";
+// import StatusIndicator from "../status-indicator";
 
 const HeroImage = () => {
   return (
@@ -16,7 +16,7 @@ const HeroImage = () => {
           </video>
         </Box>
       </AspectRatio>
-      <StatusIndicator />
+      {/* <StatusIndicator /> */}
     </Flex>
   );
 };

@@ -16,18 +16,18 @@ export const fetchBookmarks = async (page: number = 0) => {
 
   const data = await req.json();
 
-  bookmarks.push(...data.items.map(
-    ({ cover, title, link, tags }) => ({
-      link,
-      title,
-      cover,
-      tags,
-    })
-  ));
+  // bookmarks.push(...data.items.map(
+  //   ({ cover, title, link, tags }) => ({
+  //     link,
+  //     title,
+  //     cover,
+  //     tags,
+  //   })
+  // ));
 
-  if (data.items.length === PER_PAGE) {
-    bookmarks.push(...await fetchBookmarks(page + 1));
-  }
+  // if (data.items.length === PER_PAGE) {
+  //   bookmarks.push(...await fetchBookmarks(page + 1));
+  // }
 
   return bookmarks;
 }

@@ -4,11 +4,11 @@ import {
   IconButton,
   Link,
   Tooltip,
-  Container, useColorModeValue
+  Container, useColorModeValue, Button
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { useContext, useEffect, useState } from 'react';
-// import { FiCommand } from 'react-icons/fi';
+import { FiCommand } from 'react-icons/fi';
 
 // import { CmdPaletteContext } from 'src/providers/cmd-palette-provider';
 
@@ -98,10 +98,34 @@ const Header = () => {
           </Link>
         </NextLink>
         <HStack alignItems="center" spacing={{ base: 0, md: 2 }}>
+          <NextLink href="/" passHref>
+            <Tooltip label={`some text`}>
+              <Button size='sm' variant="ghost"
+              >
+                Design
+              </Button>
+            </Tooltip>
+          </NextLink>
+          <NextLink href="/" passHref>
+            <Tooltip label={`some text`}>
+              <Button size='sm' variant="ghost"
+              >
+                Publications
+              </Button>
+            </Tooltip>
+          </NextLink>
+          <NextLink href="/" passHref>
+            <Tooltip label={`some text`}>
+              <Button size='sm' variant="ghost"
+              >
+                About
+              </Button>
+            </Tooltip>
+          </NextLink>
           <Tooltip label={`Command Palette (${shortcut})`}>
             <IconButton
               aria-label="toggle theme"
-              // icon={<FiCommand />}
+              icon={<FiCommand />}
               // onClick={openCommandPalette}
               size="sm"
               variant="ghost"
